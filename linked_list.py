@@ -2,6 +2,7 @@ class Node:
     def __init__(self, data= None, next = None):
         self.data = data
         self.next = next
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -24,9 +25,11 @@ class LinkedList:
     def remove_at(self,index):
         if index < 0 or index >= self.get_length():
             raise Exception("Invalid Index")
+
         #Removing at beggining
         if index == 0:
             self.head = self.head.next
+            
         #Removing at an index
         itr = self.head
         count = 0
